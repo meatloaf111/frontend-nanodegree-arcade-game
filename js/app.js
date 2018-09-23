@@ -29,16 +29,25 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-let Player = function(x, y, speed){
+let Player = function(x, y){
     this.sprite = 'images/char-cat-girl.png';
     this.x = x;
     this.y = y;
-    this.speed = speed;
 };
 
-Player.prototype.update = function(dt){
-    this.x += this.speed * dt;
-
+Player.prototype.update = function(){
+    if (this.x > 400){
+        this.x = 400;
+    }
+    if (this.x < 0){
+        this.x = 0;
+    }
+    if (this.y > 400){
+        this.y = 400;
+    }
+    if (this.y < 0){
+        this.y = 0;
+    }
 };
 
 Player.prototype.render = function() {
@@ -51,7 +60,7 @@ Player.prototype.render = function() {
 // Place the player object in a variable called player
 let allEnemies = [];
 // Init player location
-let player = new Player(0, 0, 50);
+let player = new Player(200, 400);
 console.log(player.x);
 // Init enemies location
 let enemyInitPosition = [60, 140, 220, 300];
@@ -65,16 +74,16 @@ enemyInitPosition.forEach(function (positionY) {
 Player.prototype.handleInput = function (keyPress) {
     switch (keyPress) {
         case 'left':
-            this.x -= this.speed;
+            this.x -= 100;
             break;
         case 'up':
-            this.y -= this.speed;
+            this.y -= 100;
             break;
         case 'right':
-            this.x += this.speed;
+            this.x += 100;
             break;
         case 'down':
-            this.y += this.speed;
+            this.y += 100;
             break;
     }
 };
