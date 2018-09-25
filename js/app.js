@@ -47,6 +47,8 @@ let Player = function(x, y){
     this.y = y;
 };
 
+// Update the enemy's position not to cross the boarder of the canvas.
+// Also check if the player reaches the water to show that player has won.
 Player.prototype.update = function(){
     if (this.x > 400){
         this.x = 400;
@@ -59,8 +61,11 @@ Player.prototype.update = function(){
     }
     if (this.y < 0){
         this.y = 0;
+        window.confirm('You won!!!');
     }
 };
+
+
 
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -73,7 +78,7 @@ Player.prototype.render = function() {
 let allEnemies = [];
 // Init player location
 let player = new Player(200, 400);
-console.log(player.x);
+
 // Init enemies location
 let enemyInitPosition = [60, 140, 220, 300];
 let enemy;
@@ -83,6 +88,7 @@ enemyInitPosition.forEach(function (positionY) {
     allEnemies.push(enemy);
 });
 
+// When the move key is pressed , calculate player's position
 Player.prototype.handleInput = function (keyPress) {
     switch (keyPress) {
         case 'left':
