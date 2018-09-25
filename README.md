@@ -1,6 +1,42 @@
-frontend-nanodegree-arcade-game
-===============================
+# Udacity Classic Arcade Game
+This is a project assigned as a part of Udacity _Front-End Web Developer Nanodegree Program_.
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+This is a complete browser-based arcade game.
+You can enjoy the game by downloading these source codes.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Table of Contents
+
+* [Dependencies](#dependencies)
+* [Installation](#installation)
+* [Instructions](#instructions)
+* [MoreInfo](#moreinfo)
+
+## Dependencies
+
+None
+
+
+## Installation
+
+To get started, clone the repositry and open **index.html** in your browser.
+
+`git clone https://github.com/meatloaf111/frontend-nanodegree-arcade-game.git`
+
+`cd frontend-nanodegree-arcade-game`
+
+## Instructions
+
+You play a player, cat-girl.
+The bugs are youru enemies.
+
+You can use ↑,↓,←,→ Key to control your character, then you have to control your character and cross the blocks without collision with enemies.
+When you successfulyy cross the blocks and reach the water, you win.
+The game will be alert the console.
+
+## More Info
+
+Udacity Nanodegree
+
+https://sa.udacity.com/course/front-end-web-developer-nanodegree--nd001
+
+
